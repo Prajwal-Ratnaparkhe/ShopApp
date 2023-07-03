@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" thread-count="3">
+
+    <listeners>
+        <listener class-name="testComponents.Listeners"/>
+    </listeners>
+
+
+    <!--    <test thread-count="5" name="AppActivity">-->
+    <!--        <classes>-->
+    <!--            <class name="tests.SubmitOrderTest"/>-->
+    <!--        </classes>-->
+    <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+
+    <test thread-count="5" name="ErrorValidation">
+        <classes>
+            <class name="tests.ErrorValidation"/>
+        </classes>
+    </test> <!-- Test -->
+
+
+</suite>

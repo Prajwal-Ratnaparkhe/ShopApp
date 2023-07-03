@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Test Suite" thread-count="3" >
+
+    <listeners>
+        <listener class-name="resources.TestListener"/>
+    </listeners>
+
+    <!--     For Chrome Browser-->
+
+    <test thread-count="5" name="AppActivity chrome">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="tests.SubmitOrderTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test thread-count="5" name="ErrorValidation chrome">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="tests.ErrorValidation"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <!--     For Edge Browser-->
+
+    <test thread-count="5" name="AppActivity edge">
+        <parameter name="browserName" value="edge"/>
+        <classes>
+            <class name="tests.SubmitOrderTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test thread-count="5" name="ErrorValidation edge">
+        <parameter name="browserName" value="edge"/>
+        <classes>
+            <class name="tests.ErrorValidation"/>
+        </classes>
+    </test> <!-- Test -->
+
+</suite>
